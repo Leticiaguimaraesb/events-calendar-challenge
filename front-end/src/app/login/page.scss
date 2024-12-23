@@ -1,0 +1,73 @@
+@import "@/styles/variables.scss";
+
+.login-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h2 {
+      margin: 0;
+      text-align: center;
+      font-size: $TEXT-MD;
+      font-weight: $FONT-SEMIBOLD;
+      color: $secondary-color;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      label {
+        font-size: $TEXT-SM;
+        color: $secondary-color;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid $medium-gray;
+        border-radius: 4px;
+        font-size: $TEXT-SM;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+          border-color: $primary-color;
+          outline: none;
+          box-shadow: 0 0 4px $primary-color;
+        }
+      }
+    }
+
+    .error {
+      font-size: $TEXT-XSM;
+      color: $error-color;
+      margin-top: 0.25rem;
+      min-height: 16px; /* Para evitar mudanças no layout */
+    }
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .login-modal {
+    width: 95%;
+    padding: 15px;
+  }
+
+  form {
+    gap: 1rem;
+  }
+}
