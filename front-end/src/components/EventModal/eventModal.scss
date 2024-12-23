@@ -1,0 +1,197 @@
+@import "@/styles/variables.scss";
+
+.event-modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $white;
+  padding: 20px;
+  border: 1px solid $medium-gray;
+  border-radius: 16px;
+  box-shadow: 0px 4px 6px $medium-gray;
+  width: 90%;
+  max-width: 500px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h2 {
+    font-size: $TEXT-BASE;
+    font-weight: $FONT-SEMIBOLD;
+    color: $secondary-color;
+    margin: 0;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid $medium-gray;
+      border-radius: 4px;
+      font-size: $TEXT-SM;
+      resize: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: $primary-color;
+      outline: none;
+      box-shadow: 0 0 4px $primary-color;
+    }
+
+    .event-title {
+      font-size: $TEXT-MD;
+      border: none;
+      border-bottom: 1px solid $medium-gray;
+    }
+
+    .event-date-container,
+    .event-time-container {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .event-date-container div,
+    .event-time-container div {
+      gap: 5px;
+      flex: 1;
+    }
+
+    .event-modal-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+
+      button {
+        flex: 1;
+        padding: 10px;
+        font-size: $TEXT-SM;
+      }
+    }
+
+    .error {
+      font-size: $TEXT-XSM;
+      color: $error-color;
+      margin-top: 4px;
+      min-height: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .event-modal-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  form {
+    gap: 15px;
+
+    .event-date-container,
+    .event-time-container {
+      flex-direction: column;
+
+      div {
+        flex: none;
+      }
+    }
+
+    .event-modal-buttons {
+      flex-direction: column;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  .react-datepicker-wrapper {
+    width: 100%;
+  }
+
+  .react-datepicker__input-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $medium-gray;
+    border-radius: 4px;
+    font-size: $TEXT-SM;
+  }
+
+  .react-datepicker__input-container input:focus {
+    border-color: $primary-color;
+    outline: none;
+    box-shadow: 0 0 4px $primary-color;
+  }
+
+  .react-datepicker {
+    font-size: $TEXT-SM;
+    border: 1px solid $medium-gray;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: $white;
+    z-index: 1050;
+  }
+
+  .react-datepicker__header {
+    background-color: $white;
+    border-bottom: 1px solid $primary-color;
+  }
+
+  .react-datepicker__current-month {
+    font-size: $TEXT-SM;
+    font-weight: $FONT-SEMIBOLD;
+    color: $secondary-color;
+  }
+
+  .react-datepicker__day,
+  .react-datepicker__day-name {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    margin: 2px;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected {
+    background-color: $primary-color;
+    color: $white;
+  }
+
+  .react-datepicker__day--outside-month {
+    color: $medium-gray;
+  }
+
+  .react-datepicker__day:hover {
+    background-color: $white;
+    color: $secondary-color;
+  }
+
+  .react-datepicker__close-icon {
+    right: 10px;
+  }
+
+  .react-datepicker-wrapper,
+  .react-datepicker__input-container {
+    display: flex;
+    width: 100%;
+  }
+
+  .react-datepicker__input-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $medium-gray;
+    border-radius: 4px;
+    font-size: $TEXT-SM;
+  }
+}
