@@ -1,0 +1,38 @@
+@import "@/styles/variables.scss";
+
+.default-button {
+  width: 100%;
+  padding: 12px 21px;
+  background: none;
+  border: 2px solid $medium-gray;
+  font-size: $TEXT-BASE;
+  color: $secondary-color;
+  font-weight: $FONT-SEMIBOLD;
+  cursor: pointer;
+  border-radius: 50px;
+
+  &:hover {
+    background: $light-gray;
+  }
+
+  &:active {
+    background: $medium-gray;
+  }
+}
+
+.primary-button {
+  background: $primary-color;
+  border: none;
+  &:hover {
+    background: $primary-hover;
+  }
+}
+
+.icon-button {
+  width: 50px;
+  border: none;
+  font-size: $TEXT-BASE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
