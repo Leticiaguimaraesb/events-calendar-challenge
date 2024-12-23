@@ -1,0 +1,16 @@
+@import "@/styles/variables.scss";
+
+.headerContainer {
+  box-shadow: 0 4px 4px -2px $medium-gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 21px;
+  gap: 100px;
+
+  .logo {
+    width: 10%;
+    height: 5%;
+    min-width: 100px;
+  }
+}
