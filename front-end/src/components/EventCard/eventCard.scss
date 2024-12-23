@@ -1,0 +1,92 @@
+@import "@/styles/variables.scss";
+
+.event-card {
+  display: flex;
+  position: relative;
+  border: 1px solid $medium-gray;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px $medium-gray;
+  align-items: center;
+  background-color: $white;
+  width: 98%;
+
+  @media (max-width: 768px) {
+    align-items: flex-start;
+    padding: 12px;
+  }
+}
+
+.event-card-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border-right: 2px solid $medium-gray;
+  width: 10%;
+
+  @media (max-width: 768px) {
+    border-right: none;
+    padding: 0;
+    margin-bottom: 12px;
+    width: 30%;
+  }
+}
+
+.event-card-date-day {
+  font-size: $TEXT-MD;
+  font-weight: $FONT-BOLD;
+  color: $tertiary-color;
+
+  @media (max-width: 768px) {
+    font-size: 100%;
+  }
+}
+
+.event-card-date-time {
+  font-size: $TEXT-BASE;
+  color: $secondary-color;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 65%;
+  }
+}
+
+.event-card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  @media (max-width: 768px) {
+    align-items: flex-start;
+  }
+}
+
+.event-card-details {
+  flex-grow: 1;
+  color: $secondary-color;
+  padding-left: 15px;
+
+  h3 {
+    font-size: $TEXT-BASE;
+    font-weight: $FONT-BOLD;
+    color: $secondary-color;
+  }
+
+  p {
+    font-size: $TEXT-SM;
+    color: $secondary-color;
+  }
+}
+
+.event-card-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
